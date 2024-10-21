@@ -1,3 +1,4 @@
+# Laravel Build
 /.phpunit.cache
 /bootstrap/ssr
 /node_modules
@@ -21,3 +22,29 @@ yarn-error.log
 /.idea
 /.vscode
 /.zed
+
+
+# Laravel specific
+/public/mix-manifest.json
+/.env.*.local
+
+# Logs
+/storage/logs/*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# NPM and Yarn specific
+yarn-debug.log
+
+# Build artifacts
+/build/
+/dist/
+
+# React specific
+/.cache/
+
+# Other files to ignore
+*.pem
+*.p12

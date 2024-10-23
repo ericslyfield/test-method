@@ -5,18 +5,26 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+// Link to Index page at "/"
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+    return view('index');
 });
 
+// Link to About page at "/about"
+Route::get('/about', function () {
+    return view('about');
+});
+
+// Link to Contact page at "/contact"
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+// Link to Dashboard page at "/dashboard"
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

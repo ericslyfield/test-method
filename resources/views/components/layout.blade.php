@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title inertia>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -12,11 +12,17 @@
 
         <!-- Scripts -->
         @routes
-        @viteReactRefresh
-        @vite(['resources/js/app.tsx', "resources/js/Pages/{$page['component']}.tsx"])
-        @inertiaHead
     </head>
     <body class="font-sans antialiased">
-        @inertia
+    
+    <nav>
+    <x-nav-link href="/index">Index </x-nav-link>
+    <x-nav-link href="/about" style="color: green">About</x-nav-link>
+    <x-nav-link href="/contact">Contact</x-nav-link>
+</nav>
+    <x-navigation></x-navigation>
+    
+    {{ $slot }}
+         
     </body>
 </html>

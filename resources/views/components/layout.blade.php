@@ -15,12 +15,11 @@
     </head>
     <body class="font-sans antialiased">
     
-    <nav>
-    <x-nav-link href="/index">Index </x-nav-link>
-    <x-nav-link href="/about" style="color: green">About</x-nav-link>
-    <x-nav-link href="/contact">Contact</x-nav-link>
+<nav>
+    <x-navigation-link href="/">Index </x-nav-link>
+    <x-navigation-link href="/about" style="color: green">About</x-nav-link>
+    <x-navigation-link href="/contact">Contact</x-nav-link>
 </nav>
-    <x-navigation></x-navigation>
     
     {{ $slot }}
          

@@ -12,16 +12,16 @@
 
         <!-- Scripts -->
         @routes
+        @vite(['resources/css/app.css', 'resources/js/app.tsx'])
     </head>
     <body class="font-sans antialiased">
     
-<nav>
-    <x-navigation-link href="/">Index </x-nav-link>
-    <x-navigation-link href="/about" style="color: green">About</x-nav-link>
-    <x-navigation-link href="/contact">Contact</x-nav-link>
-</nav>
-    
-    {{ $slot }}
+
+    <div class="h-60 overflow-y-auto">
+  <header class="sticky top-0 bg-blue-200 p-4">Header</header>
+  <main class="h-96 flex-1 bg-blue-50 p-4">Content</main>
+</div>
+
          
     </body>
 </html>

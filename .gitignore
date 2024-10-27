@@ -49,3 +49,4 @@ yarn-debug.log
 # Other files to ignore
 *.pem
 *.p12
+.env.example
